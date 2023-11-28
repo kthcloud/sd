@@ -20,10 +20,8 @@ app.add_middleware(
 
 # Load the diffusion model
 pipe = DiffusionPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-xl-base-1.0",
-    torch_dtype=torch.float16,
-    use_safetensors=True,
-    variant="fp16"
+    "stabilityai/stable-diffusion-2-1",
+    torch_dtype=torch.float16
 )
 pipe.to("cuda")
 
